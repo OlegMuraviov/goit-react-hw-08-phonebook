@@ -6,9 +6,9 @@ import {
   getError,
 } from 'redux/contacts/contacts-selector';
 
-import Form from 'components/Form/Form';
-import Filter from 'components/Filter/Filter';
-import ContactsList from 'components/ContactsList/ContactsList';
+import ContactsForm from './ContactsForm/ContactsForm';
+import Filter from 'components/Phonebook/Filter/Filter';
+import ContactsList from 'components/Phonebook/ContactsList/ContactsList';
 
 import * as operations from '../../redux/contacts/contacts-operations';
 
@@ -25,8 +25,8 @@ const Phonebook = () => {
     dispatch(operations.fetchContacts());
   }, [dispatch]);
 
-  const addContact = ({ name, phone }) => {
-    dispatch(operations.addContact({ name, phone }));
+  const addContact = ({ name, number }) => {
+    dispatch(operations.addContact({ name, number }));
   };
 
   const removeContact = id => {
@@ -50,9 +50,9 @@ const Phonebook = () => {
   const filteredContacts = getFilteredContacts();
   return (
     <div>
-      <h2>Phonebook</h2>
-      <Form onSubmit={addContact} />
-      <h3>Contacts</h3>
+      <h2>Книга контактів</h2>
+      <ContactsForm onSubmit={addContact} />
+      <h3>Контакти: </h3>
       <Filter filter={filter} handleChange={changeFilter} />
       {loading && <p>...Loading</p>}
       {error && <p>{error.message}</p>}

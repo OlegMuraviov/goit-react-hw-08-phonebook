@@ -51,7 +51,9 @@ const contactsSlice = createSlice({
       error: null,
     }),
     [removeContact.fulfilled]: (store, { payload }) => {
+      //payload => id - приходить underfined??? what!
       store.items = store.items.filter(item => item.id !== payload);
+
       store.loading = false;
     },
     [removeContact.rejected]: (store, { payload }) => {

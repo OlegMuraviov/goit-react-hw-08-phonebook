@@ -1,0 +1,10 @@
+.wrap {
+    margin: 50px 0px 0px 200px;
+}
+.link {
+    font-size: 14px;
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 2px 4px;
+    background-color: rgb(245, 224, 179);
+}

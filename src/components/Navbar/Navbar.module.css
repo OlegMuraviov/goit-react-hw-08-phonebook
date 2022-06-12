@@ -1,0 +1,14 @@
+.wrap {
+    width: 80vw;
+    margin: 0 auto;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.link {
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 2px 4px;
+    background-color: rgb(179, 245, 196);
+}

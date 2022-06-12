@@ -1,0 +1,26 @@
+.wrap {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 20px;
+    border-bottom: 1px solid #000;
+}
+
+.wrap__title {
+    font-size: 24px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: black;
+    text-decoration: none;
+}
+
+.wrap__title:not(:last-child) {
+    margin-right: 100px;
+}
+
+.wrap__title:hover,
+.wrap__title:focus {
+    color: blueviolet;
+    background-color: rgb(255, 127, 157);
+}
+

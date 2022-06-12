@@ -1,13 +1,17 @@
 const ContactsList = ({ filteredContacts, removeContact }) => {
   return (
     <div>
-      <ul>
+      <ul
+        style={{
+          listStyleType: 'none',
+        }}
+      >
         {filteredContacts.map(contact => {
-          const { id, name, phone } = contact;
+          const { id, name, number } = contact;
           return (
             <li key={id}>
-              {name}: {phone}{' '}
-              <button type="button" onClick={e => removeContact(id)}>
+              {name}: {number}{' '}
+              <button type="button" onClick={() => removeContact(id)}>
                 Delete
               </button>
             </li>

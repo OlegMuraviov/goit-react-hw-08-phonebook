@@ -1,0 +1,20 @@
+.menu {
+    display: flex;
+    list-style-type: none;
+}
+
+
+.link {
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 2px 4px;
+    background-color: wheat;
+}
+.link:not(:last-child) {
+    margin-right: 5px;
+}
+
+.linkActive {
+    composes: link;
+    background-color: rgb(86, 163, 35);
+}
